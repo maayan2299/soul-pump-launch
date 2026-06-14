@@ -99,6 +99,64 @@ function Index() {
           </motion.div>
         </div>
       </section>
+
+      {/* About Section */}
+      <section id="about" className="bg-white py-20 sm:py-24 lg:py-28">
+        <div className="mx-auto flex max-w-7xl flex-col items-center gap-12 px-6 lg:flex-row lg:items-center lg:gap-16 lg:px-8">
+          {/* Image */}
+          <motion.div
+            className="flex w-full flex-1 justify-center lg:justify-start"
+            initial={{ opacity: 0, y: 32 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+          >
+            <div className="aspect-[4/5] w-full max-w-md overflow-hidden rounded-2xl bg-stone shadow-[0_8px_40px_-12px_rgba(58,54,50,0.18)]">
+              <img
+                src="/images/about-andy-yahel.jpg"
+                alt="Andy and Yahel, founders of Soul Pump Fitness"
+                className="h-full w-full object-cover"
+              />
+            </div>
+          </motion.div>
+
+          {/* Text */}
+          <motion.div
+            className="flex flex-1 flex-col items-start"
+            initial={{ opacity: 0, y: 32 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
+          >
+            <span className="text-sm font-medium uppercase tracking-widest text-dusty-rose">
+              Our Story
+            </span>
+
+            <h2 className="mt-3 max-w-lg text-3xl font-bold leading-tight tracking-tight text-espresso sm:text-4xl lg:text-[2.5rem]">
+              A Husband &amp; Wife Team on a Mission
+            </h2>
+
+            <div className="mt-6 max-w-md space-y-4 text-base leading-[1.7] text-espresso/70">
+              <p>
+                Since 2013, we&apos;ve been helping people move better, feel stronger, and expand their bodies — not break them down. Soul Pump Fitness was born from a simple belief: your workout should leave you feeling powerful and open, not sore and compressed.
+              </p>
+              <p>
+                Our classes blend resistance training with yoga-inspired mobility and beginner-friendly inversions that support circulation and spinal lengthening. Every session is taught in an intimate group setting where we see you, guide you, and grow with you.
+              </p>
+              <p>
+                We&apos;re not about pushing harder — we&apos;re about moving smarter. Our focus is longevity, so your body thrives for decades to come.
+              </p>
+            </div>
+
+            <Link
+              to="/contact"
+              className="mt-8 rounded-lg bg-dusty-rose px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-dusty-rose/90"
+            >
+              Meet Us
+            </Link>
+          </motion.div>
+        </div>
+      </section>
     </main>
   );
 }
