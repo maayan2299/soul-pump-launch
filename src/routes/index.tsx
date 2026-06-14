@@ -87,7 +87,7 @@ function Index() {
             className="flex flex-1 items-center justify-center py-8 lg:py-0"
             initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
+            transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
           >
             <div className="relative aspect-[4/5] w-full max-w-md overflow-hidden rounded-2xl bg-stone shadow-[0_8px_40px_-12px_rgba(58,54,50,0.18)]">
               <img
