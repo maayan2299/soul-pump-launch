@@ -158,6 +158,135 @@ function Index() {
           </motion.div>
         </div>
       </section>
+
+      {/* Classes Section */}
+      <section id="classes" className="bg-cream py-20 sm:py-24 lg:py-28">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          {/* Header */}
+          <motion.div
+            className="flex flex-col items-center text-center"
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
+            <span className="text-sm font-medium uppercase tracking-widest text-dusty-rose">
+              What We Offer
+            </span>
+            <h2 className="mt-3 max-w-2xl text-3xl font-bold leading-tight tracking-tight text-espresso sm:text-4xl lg:text-[2.5rem]">
+              Move Better. Feel Stronger.
+            </h2>
+            <p className="mt-4 max-w-xl text-base leading-relaxed text-espresso/60">
+              Classes designed for longevity — combining strength, stretch, and mindful movement.
+            </p>
+          </motion.div>
+
+          {/* Cards Grid */}
+          <motion.div
+            className="mt-14 grid grid-cols-1 gap-8 md:grid-cols-2"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={{
+              hidden: {},
+              visible: {
+                transition: { staggerChildren: 0.12 },
+              },
+            }}
+          >
+            {/* Card 1 */}
+            <motion.div
+              variants={itemVariants}
+              className="flex flex-col items-start rounded-2xl bg-white p-8 shadow-[0_4px_24px_-8px_rgba(58,54,50,0.10)]"
+            >
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-dusty-rose/10">
+                <Dumbbell className="text-dusty-rose" size={24} />
+              </div>
+              <h3 className="mt-6 text-xl font-semibold text-espresso">
+                Group Classes
+              </h3>
+              <p className="mt-3 text-base leading-relaxed text-espresso/65">
+                Intimate group sessions blending resistance training, mobility work, and beginner-friendly inversions. Feel stronger and expanded after every class.
+              </p>
+              <Link
+                to="/contact"
+                className="mt-6 rounded-lg border-[1.5px] border-dusty-rose px-5 py-2.5 text-sm font-medium text-dusty-rose transition-colors hover:bg-dusty-rose hover:text-white"
+              >
+                Book a Free Class
+              </Link>
+            </motion.div>
+
+            {/* Card 2 */}
+            <motion.div
+              variants={itemVariants}
+              className="flex flex-col items-start rounded-2xl bg-white p-8 shadow-[0_4px_24px_-8px_rgba(58,54,50,0.10)]"
+            >
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-sage/10">
+                <Heart className="text-sage" size={24} />
+              </div>
+              <h3 className="mt-6 text-xl font-semibold text-espresso">
+                Prenatal Classes
+              </h3>
+              <p className="mt-3 text-base leading-relaxed text-espresso/65">
+                Safe, gentle movement designed for expecting mothers. Build strength and flexibility while supporting your body through every stage of pregnancy.
+              </p>
+              <Link
+                to="/contact"
+                className="mt-6 rounded-lg border-[1.5px] border-dusty-rose px-5 py-2.5 text-sm font-medium text-dusty-rose transition-colors hover:bg-dusty-rose hover:text-white"
+              >
+                Learn More
+              </Link>
+            </motion.div>
+
+            {/* Card 3 */}
+            <motion.div
+              variants={itemVariants}
+              className="flex flex-col items-start rounded-2xl bg-white p-8 shadow-[0_4px_24px_-8px_rgba(58,54,50,0.10)]"
+            >
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-dusty-rose/10">
+                <User className="text-dusty-rose" size={24} />
+              </div>
+              <h3 className="mt-6 text-xl font-semibold text-espresso">
+                Private Training
+              </h3>
+              <p className="mt-3 text-base leading-relaxed text-espresso/65">
+                One-on-one sessions tailored to your body and goals. Perfect for those who want personalized attention and a custom movement plan.
+              </p>
+              <Link
+                to="/contact"
+                className="mt-6 rounded-lg border-[1.5px] border-dusty-rose px-5 py-2.5 text-sm font-medium text-dusty-rose transition-colors hover:bg-dusty-rose hover:text-white"
+              >
+                Get in Touch
+              </Link>
+            </motion.div>
+
+            {/* Card 4 */}
+            <motion.div
+              variants={itemVariants}
+              className="relative flex flex-col items-start rounded-2xl bg-white p-8 shadow-[0_4px_24px_-8px_rgba(58,54,50,0.10)]"
+            >
+              <span className="absolute right-6 top-6 rounded-full bg-sage px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white">
+                New
+              </span>
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-sage/10">
+                <Video className="text-sage" size={24} />
+              </div>
+              <h3 className="mt-6 text-xl font-semibold text-espresso">
+                Live Online Classes
+              </h3>
+              <p className="mt-3 text-base leading-relaxed text-espresso/65">
+                Join us from anywhere. Real-time instruction, personal feedback, and the same transformative workout — streamed straight to your living room.
+              </p>
+              <Link
+                to="/contact"
+                className="mt-6 rounded-lg border-[1.5px] border-dusty-rose px-5 py-2.5 text-sm font-medium text-dusty-rose transition-colors hover:bg-dusty-rose hover:text-white"
+              >
+                Join Online
+              </Link>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
     </main>
   );
 }
