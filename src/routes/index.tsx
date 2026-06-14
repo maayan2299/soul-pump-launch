@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
+import { Dumbbell, Heart, User, Video } from "lucide-react";
 
 export const Route = createFileRoute("/")({
   head: () => ({
