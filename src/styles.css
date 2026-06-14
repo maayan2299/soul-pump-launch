@@ -99,10 +99,9 @@ html {
   border-radius: var(--radius-lg);
   font-weight: 500;
   transition: all 0.2s ease;
-}
-
-@utility btn-primary:hover {
-  background-color: oklch(0.62 0.09 25);
+  &:hover {
+    background-color: oklch(0.62 0.09 25);
+  }
 }
 
 @utility btn-outline {
@@ -113,9 +112,9 @@ html {
   font-weight: 500;
   border: 1.5px solid var(--color-dusty-rose);
   transition: all 0.2s ease;
+  &:hover {
+    background-color: var(--color-dusty-rose);
+    color: white;
+  }
 }
 
-@utility btn-outline:hover {
-  background-color: var(--color-dusty-rose);
-  color: white;
-}
